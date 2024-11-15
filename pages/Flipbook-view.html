@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kernel Magazine</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+</head>
+
+<body>
+<div class="navbar">
+    <!-- Logo -->
+    <div class="logo-wrapper">
+        <img src="../images/klh-logo.png" alt="KL University Logo" class="logo-img">
+    </div>
+
+    <!-- Menu and Sign In Button Wrapper -->
+    <div class="menu-button-wrapper">
+        <!-- Sign In Button -->
+        <button class="button-33" onclick="goToWeb()" role="button">Web View</button>
+        <!--        <button class="sign-in-btn">Sign In</button>-->
+        <button class="button-33" role="button">Sign In</button>
+    </div>
+</div>
+
+    <div class="sort-menu">
+        <label for="sort-options">Sort by:</label>
+        <select id="sort-options">
+            <option value="latest">Latest</option>
+            <option value="oldest">Oldest</option>
+        </select>
+        <button onclick="sortItems()">Sort</button>
+    </div>
+
+ <div style="padding: 30px;">
+     <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" style="border: 1px solid lightgray; width: 100%; height: 600px;" src="https://heyzine.com/flip-book/dcb1a3b6fb.html"></iframe>
+ </div>
+</body>
+</html>

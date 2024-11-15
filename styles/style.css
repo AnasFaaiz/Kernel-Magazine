@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 8px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 40px;
+    /*min-width: 100%;*/
+}
+.navbar .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.navbar .logo {
+    font-size: 1em;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.navbar .menu-button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sign-in-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.sign-in-btn:hover {
+    background-color: #0056b3;
+    transition: background-color 0.2s ease;
+}
+
+/* Title and underline */
+.page-title {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: darkviolet;
+    text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    margin: 30px 0 15px;
+    text-align: center;
+    font-family: "Merriweather", serif; /* Similar to Forbes font */
+    text-transform: uppercase;
+}
+.underline {
+    width: 90%;
+    height: 4px;
+    background: linear-gradient(to right, #333, #555, #333); /* Gradient effect */
+    margin: 0 auto;
+    border-radius: 2px; /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.main-article img {
+    width: 100%;  /* Makes image take full width of parent */
+    height: auto;  /* Maintains aspect ratio */
+    object-fit: cover;  /* Ensures image covers the area without distortion */
+    border-radius: 4px;  /* Optional: adds slight rounded corners */
+    margin-bottom: 15px;  /* Adds some space between image and title */
+}
+
+.main-article {
+    flex: 0 0 65%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition */
+    cursor: pointer;  /* Shows it's clickable */
+}
+.main-article:hover {
+    transform: translateY(-5px);  /* Slight lift effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+}
+
+.main-article h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.additional-content {
+    flex: 0 0 30%; /* Takes up 30% of the width */
+    background-color: #f1f1f1;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;  /* Make it a flex container */
+    flex-direction: column;  /* Stack children vertically */
+    gap: 0;  /* Add space between articles */
+}
+
+.additional-content article {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    transition: all 0.3s ease;  /* Smooth transition */
+    cursor: pointer;  /* Shows it's clickable */
+    padding: 5px;  /* Added padding for hover effect */
+    border-radius: 4px;  /* Rounded corners */
+}
+.additional-content article:hover {
+    background-color: #ffffff;  /* Light background on hover */
+    transform: translateX(5px);  /* Slight slide effect */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Add shadow on hover */
+}
+
+.additional-content article:hover img {
+    transform: scale(1.02);  /* Slightly enlarge image */
+}
+
+.additional-content article::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, #ddd, #999, #ddd); /* Gradient line */
+    margin: 15px auto 0;  /* Centers the line and adds top spacing */
+}
+
+.additional-content article:last-child::after {
+    display: none;
+}
+
+.additional-content h4 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    padding: 0 10px;
+}
+
+.additional-content img {
+    width: 90%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 10px auto 10px;  /* top | horizontal | bottom */
+    display: block;
+    transition: transform 0.3s ease;  /* Smooth image transition */
+}
+
+.button-33 {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transform: scale(0.8);
+}
+
+.button-33:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
