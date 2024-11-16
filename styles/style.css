@@ -112,7 +112,7 @@ body {
     transition: color 0.3s ease;
 }
 
-.main-article:hover h2 {
+.main-article h2, .related-article h3, .horizontal-section article h3 {
     color: #002B5B;
 }
 
