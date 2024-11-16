@@ -1,193 +1,595 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
+    font-family: 'Times New Roman', Times, serif;
+    background: steelblue;
+    background-image: linear-gradient(to right bottom, #9bafd9, #103783);
+    color: #333;
+    font-size: 1.2rem;
     margin: 0;
-    font-family: "Times New Roman", Times, serif;
+    padding: 0;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: aliceblue;
-    padding: 8px 30px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    height: 40px;
-    /*min-width: 100%;*/
-}
-.navbar .logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.logo-img {
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-}
-
-.navbar .logo {
-    font-size: 1em;
-    font-weight: bold;
-    white-space: nowrap;
-    margin: 0;
-}
-
-.navbar .menu-button-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.sign-in-btn {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 4px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.8em;
-}
-
-.sign-in-btn:hover {
-    background-color: #0056b3;
-    transition: background-color 0.2s ease;
-}
-
-/* Title and underline */
-.page-title {
-    font-size: 2.8em;
-    font-weight: bold;
-    color: darkviolet;
-    text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
-    margin: 30px 0 15px;
+/* Main Page Title & SubTitle */
+.nine h1 {
     text-align: center;
-    font-family: "Merriweather", serif; /* Similar to Forbes font */
+    font-size: 50px;
     text-transform: uppercase;
-}
-.underline {
-    width: 90%;
-    height: 4px;
-    background: linear-gradient(to right, #333, #555, #333); /* Gradient effect */
-    margin: 0 auto;
-    border-radius: 2px; /* Rounded corners */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    color: #002B5B;
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
-.content {
-    display: flex;
+.nine h1 span {
+    margin-top: 5px;
+    font-size:15px;
+    color:#444;
+    word-spacing:1px;
+    font-weight:normal;
+    letter-spacing:2px;
+    text-transform: uppercase;
+    font-family:"Raleway", sans-serif; font-weight:500;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.nine h1 span:after,.nine h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+    background-color:#f8f8f8;
+}
+
+/* Flipbook View Title */
+.Title h1 {
+    text-align: left;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #002B5B;
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    padding-left: 10px;
+}
+
+.header-container {
+            /* background-image: linear-gradient(to right, #fff, lightblue); */
     padding: 20px;
-    gap: 20px;
+    padding-bottom: 0;
+    border: 1px solid lightblue;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.related-article {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth animations */
 }
 
-.main-article img {
-    width: 100%;  /* Makes image take full width of parent */
-    height: auto;  /* Maintains aspect ratio */
-    object-fit: cover;  /* Ensures image covers the area without distortion */
-    border-radius: 4px;  /* Optional: adds slight rounded corners */
-    margin-bottom: 15px;  /* Adds some space between image and title */
+.related-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.related-article h3 {
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.related-article:hover h3 {
+    color: #002B5B;
 }
 
 .main-article {
-    flex: 0 0 65%;
-    background-color: #f9f9f9;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition */
-    cursor: pointer;  /* Shows it's clickable */
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
 .main-article:hover {
-    transform: translateY(-5px);  /* Slight lift effect */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .main-article h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-bottom: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.additional-content {
-    flex: 0 0 30%; /* Takes up 30% of the width */
-    background-color: #f1f1f1;
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;  /* Make it a flex container */
-    flex-direction: column;  /* Stack children vertically */
-    gap: 0;  /* Add space between articles */
+.main-article:hover h2 {
+    color: #002B5B;
 }
 
-.additional-content article {
+.main-article img {
     width: 100%;
+    height: auto;
     margin-bottom: 10px;
-    position: relative;
-    transition: all 0.3s ease;  /* Smooth transition */
-    cursor: pointer;  /* Shows it's clickable */
-    padding: 5px;  /* Added padding for hover effect */
-    border-radius: 4px;  /* Rounded corners */
-}
-.additional-content article:hover {
-    background-color: #ffffff;  /* Light background on hover */
-    transform: translateX(5px);  /* Slight slide effect */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Add shadow on hover */
+    transition: transform 0.3s ease;
 }
 
-.additional-content article:hover img {
-    transform: scale(1.02);  /* Slightly enlarge image */
+.nav-button {
+    margin: 0 0.6rem;
+    font-size: inherit;
+}
+nav {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.horizontal-section {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.normal-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 992px) {
+    .nav-button {
+        margin: 0.6rem 0;
+    }
 }
 
-.additional-content article::after {
-    content: '';
-    display: block;
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(to right, #ddd, #999, #ddd); /* Gradient line */
-    margin: 15px auto 0;  /* Centers the line and adds top spacing */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+.fp-iframe {
+    border: 1px solid lightgray;
+    width: 98%;
+    height: 600px;
+    max-width: 1150px;
 }
 
-.additional-content article:last-child::after {
-    display: none;
+/* Topics Covered Container */
+.topics-covered {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 91%;
+    max-width: 1200px;
 }
 
-.additional-content h4 {
-    font-size: 1.3em;
-    margin-bottom: 5px;
-    padding: 0 10px;
+.topics-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-.additional-content img {
-    width: 90%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin: 10px auto 10px;  /* top | horizontal | bottom */
-    display: block;
-    transition: transform 0.3s ease;  /* Smooth image transition */
+.topics-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.button-33 {
-    background-color: #c2fbd7;
-    border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-    color: green;
-    cursor: pointer;
+.topic-tag {
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.9em;
     display: inline-block;
-    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 16px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    transform: scale(0.8);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.button-33:hover {
-    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-    transform: scale(1.05) rotate(-1deg);
+/* Different colors for tags */
+.topic-tag:nth-child(1) {
+    background-color: #ff7f7f;
+    color: white;
 }
+
+.topic-tag:nth-child(2) {
+    background-color: #7fb2ff;
+    color: white;
+}
+
+.topic-tag:nth-child(3) {
+    background-color: rgb(255, 204, 0);
+    color: white;
+}
+
+.topic-tag:nth-child(4) {
+    background-color: #FFB6C1;
+    color: white;
+}
+
+.topic-tag:nth-child(5) {
+    background-color: #DDA0DD;
+    color: white;
+}
+
+.topic-tag:nth-child(6) {
+    background-color: #87CEEB;
+    color: white;
+}
+
+.topic-tag:nth-child(7) {
+    background-color: darkseagreen;
+    color: white;
+}
+
+/* Hover effect for all tags */
+.topic-tag:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .topics-tags {
+        gap: 8px;
+    }
+
+    .topic-tag {
+        padding: 4px 10px;
+        font-size: 0.85em;
+    }
+}
+
+/* Past Issue Magazine Container */
+.past-issues-container {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 91%;
+    max-width: 1200px;
+    gap: 12px;
+    padding: 25px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.issue-box {
+    background: white;
+    border-radius: 8px;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.issue-box:hover {
+    transform: translateY(-5px);
+}
+
+.issue-image-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #f5f5f5;
+
+}
+
+.issue-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.issue-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.issue-content {
+    padding: 15px;
+}
+
+.issue-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.issue-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Dropdown customization */
+.btn-light {
+    background-color: white;
+    border: 1px solid #dee2e6;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .past-issues-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .header-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .btn-light {
+        width: 100%;
+    }
+}
+/* Ends Responsive adjustments */
+
+/* .main-article h3
+{
+    color: #333;
+    font-size: 1em;
+    font-weight: lighter;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
+/*body {*/
+/*    margin: 0;*/
+/*    font-family: "Times New Roman", Times, serif;*/
+/*}*/
+
+/*!*.navbar {*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    justify-content: space-between;*!*/
+/*!*    background-color: aliceblue;*!*/
+/*!*    padding: 8px 30px;*!*/
+/*!*    box-shadow: 0 2px 4px rgba(0,0,0,0.1);*!*/
+/*!*    height: 40px;*!*/
+/*!*    !*min-width: 100%;*!*!*/
+/*!*}*!*/
+/*!*.navbar .logo-wrapper {*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    gap: 8px;*!*/
+/*!*}*!*/
+
+/*!*.logo-img {*!*/
+/*!*    width: 75px;*!*/
+/*!*    height: 75px;*!*/
+/*!*    object-fit: contain;*!*/
+/*!*}*!*/
+
+/*!*.navbar .logo {*!*/
+/*!*    font-size: 1em;*!*/
+/*!*    font-weight: bold;*!*/
+/*!*    white-space: nowrap;*!*/
+/*!*    margin: 0;*!*/
+/*!*}*!*/
+
+/*!*.navbar .menu-button-wrapper {*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    gap: 10px;*!*/
+/*!*}*!*/
+
+/*!*.sign-in-btn {*!*/
+/*!*    background-color: #007BFF;*!*/
+/*!*    color: white;*!*/
+/*!*    border: none;*!*/
+/*!*    padding: 4px 10px;*!*/
+/*!*    border-radius: 4px;*!*/
+/*!*    cursor: pointer;*!*/
+/*!*    font-size: 0.8em;*!*/
+/*!*}*!*/
+
+/*!*.sign-in-btn:hover {*!*/
+/*!*    background-color: #0056b3;*!*/
+/*!*    transition: background-color 0.2s ease;*!*/
+/*!*}*!*/
+/*.nav-button {*/
+/*    margin: 0 0.6rem;*/
+/*    font-size: inherit;*/
+/*}*/
+/*nav {*/
+/*    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+/*}*/
+
+/*!* Title and underline *!*/
+/*.page-title {*/
+/*    font-size: 2.8em;*/
+/*    font-weight: bold;*/
+/*    color: darkviolet;*/
+/*    text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.3);*/
+/*    letter-spacing: 2px;*/
+/*    margin: 30px 0 15px;*/
+/*    text-align: center;*/
+/*    font-family: "Merriweather", serif; !* Similar to Forbes font *!*/
+/*    text-transform: uppercase;*/
+/*}*/
+/*.underline {*/
+/*    width: 90%;*/
+/*    height: 4px;*/
+/*    background: linear-gradient(to right, #333, #555, #333); !* Gradient effect *!*/
+/*    margin: 0 auto;*/
+/*    border-radius: 2px; !* Rounded corners *!*/
+/*    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); !* Subtle shadow for depth *!*/
+/*}*/
+
+/*.content {*/
+/*    display: flex;*/
+/*    padding: 20px;*/
+/*    gap: 20px;*/
+/*}*/
+
+/*.main-article img {*/
+/*    width: 100%;  !* Makes image take full width of parent *!*/
+/*    height: auto;  !* Maintains aspect ratio *!*/
+/*    object-fit: cover;  !* Ensures image covers the area without distortion *!*/
+/*    border-radius: 4px;  !* Optional: adds slight rounded corners *!*/
+/*    margin-bottom: 15px;  !* Adds some space between image and title *!*/
+/*}*/
+
+/*.main-article {*/
+/*    flex: 0 0 65%;*/
+/*    background-color: #f9f9f9;*/
+/*    padding: 20px;*/
+/*    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+/*    border-radius: 8px;*/
+/*    transition: transform 0.3s ease, box-shadow 0.3s ease;  !* Smooth transition *!*/
+/*    cursor: pointer;  !* Shows it's clickable *!*/
+/*}*/
+/*.main-article:hover {*/
+/*    transform: translateY(-5px);  !* Slight lift effect *!*/
+/*    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  !* Stronger shadow on hover *!*/
+/*}*/
+
+/*.main-article h2 {*/
+/*    font-size: 1.8em;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*.additional-content {*/
+/*    flex: 0 0 30%; !* Takes up 30% of the width *!*/
+/*    background-color: #f1f1f1;*/
+/*    padding: 10px;*/
+/*    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+/*    border-radius: 8px;*/
+/*    display: flex;  !* Make it a flex container *!*/
+/*    flex-direction: column;  !* Stack children vertically *!*/
+/*    gap: 0;  !* Add space between articles *!*/
+/*}*/
+
+/*.additional-content article {*/
+/*    width: 100%;*/
+/*    margin-bottom: 10px;*/
+/*    position: relative;*/
+/*    transition: all 0.3s ease;  !* Smooth transition *!*/
+/*    cursor: pointer;  !* Shows it's clickable *!*/
+/*    padding: 5px;  !* Added padding for hover effect *!*/
+/*    border-radius: 4px;  !* Rounded corners *!*/
+/*}*/
+/*.additional-content article:hover {*/
+/*    background-color: #ffffff;  !* Light background on hover *!*/
+/*    transform: translateX(5px);  !* Slight slide effect *!*/
+/*    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  !* Add shadow on hover *!*/
+/*}*/
+
+/*.additional-content article:hover img {*/
+/*    transform: scale(1.02);  !* Slightly enlarge image *!*/
+/*}*/
+
+/*.additional-content article::after {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    width: 80%;*/
+/*    height: 1px;*/
+/*    background: linear-gradient(to right, #ddd, #999, #ddd); !* Gradient line *!*/
+/*    margin: 15px auto 0;  !* Centers the line and adds top spacing *!*/
+/*}*/
+
+/*.additional-content article:last-child::after {*/
+/*    display: none;*/
+/*}*/
+
+/*.additional-content h4 {*/
+/*    font-size: 1.3em;*/
+/*    margin-bottom: 5px;*/
+/*    padding: 0 10px;*/
+/*}*/
+
+/*.additional-content img {*/
+/*    width: 90%;*/
+/*    height: 120px;*/
+/*    object-fit: cover;*/
+/*    border-radius: 4px;*/
+/*    margin: 10px auto 10px;  !* top | horizontal | bottom *!*/
+/*    display: block;*/
+/*    transition: transform 0.3s ease;  !* Smooth image transition *!*/
+/*}*/
+/*.button-33 {*/
+/*    background-color: #c2fbd7;*/
+/*    border-radius: 100px;*/
+/*    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;*/
+/*    color: green;*/
+/*    cursor: pointer;*/
+/*    display: inline-block;*/
+/*    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;*/
+/*    padding: 7px 20px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    transition: all 250ms;*/
+/*    border: 0;*/
+/*    font-size: 16px;*/
+/*    user-select: none;*/
+/*    -webkit-user-select: none;*/
+/*    touch-action: manipulation;*/
+/*    transform: scale(0.8);*/
+/*}*/
+
+/*.button-33:hover {*/
+/*    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;*/
+/*    transform: scale(1.05) rotate(-1deg);*/
+/*}*/
+
+

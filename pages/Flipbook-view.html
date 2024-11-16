@@ -4,28 +4,144 @@
 <head>
     <meta charset="UTF-8">
     <title>Kernel Magazine</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
     <script src="../scripts/script.js"></script>
 </head>
 
 <body>
-<div class="navbar">
-    <!-- Logo -->
-    <div class="logo-wrapper">
-        <img src="../images/klh-logo.png" alt="KL University Logo" class="logo-img">
-    </div>
+<!--<div class="navbar">-->
+<!--    &lt;!&ndash; Logo &ndash;&gt;-->
+<!--    <div class="logo-wrapper">-->
+<!--        <img src="../images/klh-logo.png" alt="KL University Logo" class="logo-img">-->
+<!--    </div>-->
 
-    <!-- Menu and Sign In Button Wrapper -->
-    <div class="menu-button-wrapper">
-        <!-- Sign In Button -->
-        <button class="button-33" onclick="goToWeb()" role="button">Web View</button>
-        <!--        <button class="sign-in-btn">Sign In</button>-->
-        <button class="button-33" role="button">Sign In</button>
+<!--    &lt;!&ndash; Menu and Sign In Button Wrapper &ndash;&gt;-->
+<!--    <div class="menu-button-wrapper">-->
+<!--        &lt;!&ndash; Sign In Button &ndash;&gt;-->
+<!--        <button class="button-33" onclick="goToWeb()" role="button">Web View</button>-->
+<!--        &lt;!&ndash;        <button class="sign-in-btn">Sign In</button>&ndash;&gt;-->
+<!--        <button class="button-33" role="button">Sign In</button>-->
+<!--    </div>-->
+<!--</div>-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-xl">
+        <a href="#">
+            <img src="../images/klh-logo.png" alt="Logo" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../magazine-new-design.html">Web View</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Topics</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-success nav-button" type="button">Subscribe</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary nav-button" type="button">Sign In</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="Title">
+    <h1>The Latest Issue</h1>
+</div>
+
+<div class="iframe-container">
+    <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe"
+            style="border: 1px solid lightgray; width: 98%; height: 600px;"
+            src="https://heyzine.com/flip-book/dcb1a3b6fb.html">
+    </iframe>
+</div>
+
+
+<div class="topics-covered">
+    <h2 class="topics-title">Topics Covered</h2>
+    <div class="topics-tags">
+        <span class="topic-tag">Artifical Intelligence</span>
+        <span class="topic-tag">Machine Learning</span>
+        <span class="topic-tag">Data Modelling</span>
+        <span class="topic-tag">Cybersecurity</span>
+        <span class="topic-tag">Deep Learning</span>
+        <span class="topic-tag">Block-Chain</span>
+        <span class="topic-tag">Quantum Computing</span>
     </div>
 </div>
 
-<div style="padding: 30px;">
-    <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" style="border: 1px solid lightgray; width: 100%; height: 600px;" src="https://heyzine.com/flip-book/dcb1a3b6fb.html"></iframe>
+<div class="past-issues-container">
+    <div class="header-section d-flex justify-content-between align-items-center mb-4">
+        <h2 class="section-title">Past Issues</h2>
+
+        <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Sort by: Recent
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                <li><a class="dropdown-item" href="#">Most Recent</a></li>
+                <li><a class="dropdown-item" href="#">Oldest</a></li>
+                <li><a class="dropdown-item" href="#">Most Popular</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Issue Box 1 -->
+        <div class="col-md-4 col-sm-6">
+            <div class="issue-box">
+                <div class="issue-image-container">
+                    <img src="../images/technology-and-us-825116219.jpg" alt="Issue Cover" class="issue-image">
+                    <span class="issue-date">JAN 2024</span>
+                </div>
+            </div>
+            <div class="issue-content">
+                <h3 class="issue-title">Web Development In Modern Days</h3>
+            </div>
+        </div>
+
+        <!-- Issue Box 2 -->
+        <div class="col-md-4 col-sm-6">
+            <div class="issue-box">
+                <div class="issue-image-container">
+                    <img src="../images/technology-and-us-825116219.jpg" alt="Issue Cover" class="issue-image">
+                    <span class="issue-date">DEC 2023</span>
+                </div>
+            </div>
+            <div class="issue-content">
+                <h3 class="issue-title">AI in Modern Apps</h3>
+            </div>
+        </div>
+
+        <!-- Issue Box 3 -->
+        <div class="col-md-4 col-sm-6">
+            <div class="issue-box">
+                <div class="issue-image-container">
+                    <img src="../page 2.jpg" alt="Issue Cover" class="issue-image">
+                    <span class="issue-date">NOV 2023</span>
+                </div>
+            </div>
+            <div class="issue-content">
+                <h3 class="issue-title">Quantum Computing in Modern Apps</h3>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="issue-box">
+                <div class="issue-image-container">
+                    <img src="../images/technology-and-us-825116219.jpg" alt="Issue Cover" class="issue-image">
+                    <span class="issue-date">NOV 2023</span>
+                </div>
+            </div>
+            <div class="issue-content">
+                <h3 class="issue-title">Cloud Computing</h3>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--<button id="sortButton">Sort</button>-->
