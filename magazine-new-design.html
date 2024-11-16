@@ -5,7 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magazine</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: steelblue;
+            background-image: linear-gradient(to right bottom, #9bafd9, #103783);
+            color: #333;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+        }
+        .header-container {
+            /* background-image: linear-gradient(to right, #fff, lightblue); */
+            padding: 20px;
+            padding-bottom: 0;
+            border: 1px solid lightblue;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .related-article {
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .main-article, .main-article h2 {
+            font-size: 1.5em;
+        }
+        .related-article h2 {
+            font-size: 1.25em;
+        }
+        .main-article img, .related-article img, .horizontal-section article img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .main-article h2, .related-article h3 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .nav-button {
+            margin: 0 0.6rem;
+            font-size: inherit;
+        }
+        nav {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        hr {
+            /* margin: 0; */
+            height: 1px;
+            background-color: #333;
+        }
+        .horizontal-section {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .normal-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 992px) {
+            .nav-button {
+                margin: 0.6rem 0;
+            }
+        }
+        /* .main-article h3 
+        {
+            color: #333;
+            font-size: 1em;
+            font-weight: lighter;
+        } */
+    </style>
         
 </head>
 <body>
@@ -53,15 +120,15 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Proin ac consequat arcu.</p>
             </div>
             <div class="col-md-4 d-flex flex-column">
-                <div class="related-article mb-3">
+                <div class="related-article mb-3 p-2 card">
                     <img src="images/technology-and-us-825116219.jpg" alt="Related Article 1 Image" class="img-fluid">
                     <h3>Related Article 1-1</h3>
                 </div>
-                <div class="related-article mb-3">
-                    <img src="images/technology-and-us-825116219.jpg" alt="Related Article 2 Image" class="img-fluid">
-                    <h3>Related Article 1-2</h3>
+                <div class="related-article mb-3 p-2 card">
+                    <img src="images/technology-and-us-825116219.jpg" alt="Related Article 1 Image" class="img-fluid">
+                    <h3>Related Article 1-1</h3>
                 </div>
-                <div class="related-article mb-3">
+                <div class="related-article mb-3 p-2 card">
                     <img src="images/technology-and-us-825116219.jpg" alt="Related Article 3 Image" class="img-fluid">
                     <h3>Related Article 1-3</h3>
                 </div>
@@ -69,56 +136,57 @@
         </div>
     </div>
 
-    <div class="container-xl mt-5 horizontal-section p-4">
+    <div class="container-xl mt-5 mb-5 horizontal-section p-4">
         <h1>Latest Events in KLH</h1>
         <hr>
         <div class="row">
-            <div class="col-md-3">
+            <article class="col-md-3">
                 <img src="images/technology-and-us-825116219.jpg" alt="Main Article Image" class="img-fluid">
                     <h3>Main Article Title 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Proin ac consequat arcu.</p>
-            </div>
-            <div class="col-md-3">
-                <img src="page 2.jpg" alt="Main Article Image" class="img-fluid">
-                    <h3>Main Article Title 1</h3>
+            </article>
+            <article class="col-md-3">
+                <img src="page 2.jpg" alt="Article Image" class="img-fluid">
+                    <h3>Article Title 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Proin ac consequat arcu.</p>
-            </div>
-            <div class="col-md-3">
-                <img src="page 2.jpg" alt="Main Article Image" class="img-fluid">
-                    <h3>Main Article Title 1</h3>
+            </article>
+            <article class="col-md-3">
+                <img src="page 2.jpg" alt="Article Image" class="img-fluid">
+                    <h3>Article Title 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Proin ac consequat arcu.</p>
-            </div>
-            <div class="col-md-3">
+            </article>
+            <article class="col-md-3">
                 <img src="images/technology-and-us-825116219.jpg" alt="Main Article Image" class="img-fluid">
                     <h3>Main Article Title 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Proin ac consequat arcu.</p>
-            </div>
+            </article>
         </div>
     </div>
 
     <div class="container normal-container card mt-4 mb-4 p-4">
         <div class="main-article mb-4">
+            <h3>Artificial Intelligence</h3>
             <img src="page 2.jpg" alt="Main Article Image" class="img-fluid">
             <h2>Main Article Title 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Proin ac consequat arcu.</p>
         </div>
         <div class="row">
-            <div class="col-md-3 related-article">
+            <div class="col-md-3 related-article p-2">
                 <img src="page 2.jpg" alt="Related Article 1 Image" class="img-fluid">
                 <h3>Related Article 2-1</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="col-md-3 related-article">
+            <div class="col-md-3 related-article p-2">
                 <img src="page 2.jpg" alt="Related Article 2 Image" class="img-fluid">
                 <h3>Related Article 2-2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="col-md-3 related-article">
+            <div class="col-md-3 related-article p-2">
                 <img src="page 2.jpg" alt="Related Article 3 Image" class="img-fluid">
                 <h3>Related Article 2-3</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="col-md-3 related-article">
+            <div class="col-md-3 related-article p-2">
                 <img src="page 2.jpg" alt="Related Article 4 Image" class="img-fluid">
                 <h3>Related Article 2-4</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
