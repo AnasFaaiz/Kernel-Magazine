@@ -5,7 +5,7 @@ function goToPage() {
 }
 function goToWeb() {
     // Specify the URL of the new HTML page
-    window.location.href = "../index.html";
+    window.location.href = "../magazine-new-design.html";
 }
 
 const sortButton = document.getElementById('sortButton');
