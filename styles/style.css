@@ -7,9 +7,6 @@ body {
     margin: 0;
     padding: 0;
 }
-img {
-    aspect-ratio: 3/2;
-}
 
 img:not(nav img) {
     aspect-ratio: 3/2;
