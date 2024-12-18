@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3baee1ec-4604-4bc2-a563-e8812c3e62af" name="Changes" comment="updated mobile version logo &amp; Title">
+      <change beforePath="$PROJECT_DIR$/magazine-new-design.html" beforeDir="false" afterPath="$PROJECT_DIR$/magazine-new-design.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;author&quot;: &quot;AnasFaaiz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AnasFaaiz/KLH-Magazine.git&quot;,
+    &quot;accountId&quot;: &quot;a33d78a5-8d5f-4e9e-8ea1-7b426361a3cb&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;AnasFaaiz&quot;,
+    &quot;repository&quot;: &quot;KLH-Magazine&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2opD5uNzMJH5ScAhmNCb7r71TiP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.Flipbook-view.html.executor": "Run",
+    "JavaScript Debug.Try.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.magazine-new-design.html.executor": "Run",
+    "JavaScript Debug.magazine.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/00-Projects/EPICS Projects",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3baee1ec-4604-4bc2-a563-e8812c3e62af" name="Changes" comment="" />
+      <created>1731557445154</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731557445154</updated>
+      <workItem from="1731557446996" duration="633000" />
+      <workItem from="1731562989234" duration="6270000" />
+      <workItem from="1731571708871" duration="235000" />
+      <workItem from="1731571963184" duration="1217000" />
+      <workItem from="1731604961312" duration="1979000" />
+      <workItem from="1731647054627" duration="7063000" />
+      <workItem from="1731664972906" duration="2957000" />
+      <workItem from="1731668602430" duration="12780000" />
+      <workItem from="1731723504050" duration="11875000" />
+      <workItem from="1731735837731" duration="501000" />
+      <workItem from="1731739571805" duration="251000" />
+      <workItem from="1732018209653" duration="2000" />
+      <workItem from="1732883205045" duration="3000" />
+      <workItem from="1733533196134" duration="20000" />
+      <workItem from="1734528257509" duration="2345000" />
+      <workItem from="1734530679769" duration="133000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added pdf to online link">
+      <option name="closed" value="true" />
+      <created>1731557898063</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731557898063</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Flipbook and Navbar">
+      <option name="closed" value="true" />
+      <created>1731571857156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731571857156</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added style.css &amp; script.js">
+      <option name="closed" value="true" />
+      <created>1731605749682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731605749682</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added Navbar, Main Articles &amp; Sub articles">
+      <option name="closed" value="true" />
+      <created>1731670933564</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731670933564</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added flipbook &amp; more">
+      <option name="closed" value="true" />
+      <created>1731681044339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731681044339</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated Flipbook page">
+      <option name="closed" value="true" />
+      <created>1731681776740</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731681776740</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added Titles, Past Issues, Hover Effects">
+      <option name="closed" value="true" />
+      <created>1731734793087</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731734793087</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adjusted all image size">
+      <option name="closed" value="true" />
+      <created>1731739634412</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731739634412</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated mobile version logo &amp; Title">
+      <option name="closed" value="true" />
+      <created>1734530745040</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734530745041</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added pdf to online link" />
+    <MESSAGE value="Added Flipbook and Navbar" />
+    <MESSAGE value="Added style.css &amp; script.js" />
+    <MESSAGE value="Added Navbar, Main Articles &amp; Sub articles" />
+    <MESSAGE value="Added flipbook &amp; more" />
+    <MESSAGE value="Updated Flipbook page" />
+    <MESSAGE value="Added Titles, Past Issues, Hover Effects" />
+    <MESSAGE value="Adjusted all image size" />
+    <MESSAGE value="updated mobile version logo &amp; Title" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated mobile version logo &amp; Title" />
+  </component>
+</project>
