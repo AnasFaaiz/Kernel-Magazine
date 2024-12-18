@@ -11,6 +11,9 @@ img {
     aspect-ratio: 3/2;
 }
 
+img:not(nav img) {
+    aspect-ratio: 3/2;
+}
 /* Main Page Title & SubTitle */
 .nine h1 {
     text-align: center;
@@ -22,6 +25,7 @@ img {
     font-weight: 400;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
+
 
 .nine h1 span {
     margin-top: 5px;
@@ -72,10 +76,8 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .related-article {
-    padding: 10px;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border-radius: 0.4rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth animations */
 }
 
