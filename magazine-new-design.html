@@ -33,7 +33,7 @@
                     <a class="nav-link" href="#">Topics</a>
                 </li>
                 <li class="nav-item">
-                    <button class="btn btn-outline-success nav-button" type="button">Subscribe</button>
+                    <button class="btn btn-outline-success nav-button" type="button" data-toggle="modal" data-target="#subscribeModal">Subscribe</button>
                 </li>
                 <li class="nav-item">
                     <button class="btn btn-primary nav-button" type="button">Sign In</button>
@@ -47,6 +47,56 @@
 <div class="nine d-none d-md-block">
     <h1>Kernel<span>The Core Of Computing Excellence</span></h1>
 </div>
+
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-lg shadow-lg">
+
+            <!-- Modal Body with integrated header -->
+            <div class="modal-body p-4">
+                <div class="row">
+                    <!-- Left Side: Background Image -->
+                    <div class="col-md-6 d-flex justify-content-center align-items-center" style="background-image: url('images/technology-and-us-825116219.jpg'); background-size: cover; background-position: center; height: 100%; border-radius: 10px 0 0 10px;">
+                    </div>
+
+                    <!-- Right Side: Form and Header -->
+                    <div class="col-md-6">
+                        <!-- Integrated Modal Header inside the body -->
+                        <div class="modal-header p-0 mb-3">
+                            <h5 class="modal-title text-primary font-weight-bold" id="subscribeModalLabel">Subscribe to Kernel</h5>
+                            <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <!-- Subscription Form -->
+                        <form id="subscribeForm">
+                            <div class="form-group">
+                                <label for="name" class="font-weight-bold">Full Name</label>
+                                <input type="text" class="form-control rounded-lg border-light" id="name" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="font-weight-bold">Email Address</label>
+                                <input type="email" class="form-control rounded-lg border-light" id="email" placeholder="Enter your email address">
+                            </div>
+
+                            <!-- Modal Footer with buttons -->
+                            <div class="modal-footer p-0">
+                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 <div class="header-container container mt-4 card p-4">
     <div class="row">
