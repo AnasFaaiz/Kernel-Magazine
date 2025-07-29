@@ -1,0 +1,52 @@
+.container {
+  padding: 40px;
+}
+
+.tabsNav {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #40444b;
+  margin-bottom: 30px;
+}
+
+.tabButton {
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #a9acb2;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+  transform: translateY(2px);
+}
+
+.tabButton:hover {
+  color: #ffffff;
+}
+
+.activeTab {
+  color: #00e5ff;
+  border-bottom-color: #00e5ff;
+}
+
+.categorySection {
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  color: #f0f0f0;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #747bff;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}

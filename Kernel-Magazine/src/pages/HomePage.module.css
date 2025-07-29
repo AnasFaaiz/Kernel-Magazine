@@ -1,0 +1,23 @@
+.titleContainer {
+  background-color: #1a1c20;
+  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.titleContainer h1 {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.titleContainer span {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 6px;
+  color: #00e5ff;
+  text-transform: uppercase;
+  padding-top: 10px;
+}

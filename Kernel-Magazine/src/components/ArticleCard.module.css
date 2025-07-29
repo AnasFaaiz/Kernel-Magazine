@@ -1,0 +1,51 @@
+.articleCard {
+  background: rgba(30, 32, 41, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #40444b;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  height: 320px;
+  display: flex;
+  flex-direction: blue(10px);
+}
+
+.articleCard:hover {
+  transform: translateY(-5px);
+  border-color: #747bff;
+  box-shadow: 0 10px 30px -10px rgba(116, 123, 255, 0.2);
+}
+
+.articleCard img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cardContent {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardContent h3 {
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.cardContent p {
+  color: #a9acb2;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+}

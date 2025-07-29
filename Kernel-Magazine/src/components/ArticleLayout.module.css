@@ -1,0 +1,152 @@
+/* --- Frosted Glass Container --- */
+.boxContainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px; /* Used for the gradient border */
+  border-radius: 12px;
+  
+  /* The Glass Effect */
+  background: rgba(30, 32, 41, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  /* A subtle gradient border */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(to right, #00e5ff, #747bff) 1;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  background: rgba(30, 32, 41, 0.5); /* Slightly darker inner background */
+  border-radius: 10px;
+}
+
+/* --- Card Styling --- */
+.mainArticle{
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #40444b;
+  transition: all 0.3s ease;
+}
+
+.relatedCard {
+   display: flex;
+	align-items: center;
+	gap: 15px;
+	background-color: #16171b;
+	border-radius: 8px;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	border: 1px solid #40444b;
+	padding: 10px;
+}
+
+.relatedCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: #00e5ff;
+  box-shadow: 0 10px 30px -10px rgba(0, 229, 255, 0.2);
+}
+
+.mainArticle img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid #40444b;
+}
+
+.relatedCard img {
+  width: 90px;
+  height: 60px;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+/* --- Content and Typography --- */
+.articleContent {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mainArticle h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 10px 0;
+  background: linear-gradient(to right, #ffffff, #b9bbbe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.relatedCard h3 {
+  margin: 0 0 5px 0;
+  color: #f0f0f0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.mainArticle p {
+  color: #a9acb2;
+  line-height: 1.7;
+  flex-grow: 1; /* Pushes the footer down */
+}
+
+/* --- Category Tag --- */
+.categoryTag {
+  display: inline-block;
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+  background: transparent;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* --- Metadata Styling --- */
+.articleFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #40444b;
+}
+
+.metaItem {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.9rem;
+  color: #72767d;
+}
+
+.articleMeta {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.9rem;
+  color: #72767d;
+  margin-top: 15px;
+}
+
+/* --- Responsive Layout --- */
+@media (min-width: 768px) {
+  .contentWrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .mainArticle {
+    flex: 2;
+  }
+  .relatedArticles {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
