@@ -5,4 +5,12 @@
   text-align: center;
 }
 
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.mainContent {
+  flex-grow: 1;
+}

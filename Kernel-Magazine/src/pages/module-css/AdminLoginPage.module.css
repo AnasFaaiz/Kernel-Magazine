@@ -1,0 +1,56 @@
+.loginContainer {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 12px;
+
+  /* The Glass Effect */
+  background: rgba(30, 32, 41, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.loginContainer h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #a9acb2;
+  font-weight: 500;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #40444b;
+  background-color: #16171b;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: rgba(0, 229, 255, 0.1);
+}

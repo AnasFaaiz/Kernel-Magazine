@@ -1,0 +1,76 @@
+.dashboardContainer {
+  /*max-width: 1000px;*/
+  /*margin: 40px auto;*/
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+
+  /* The Glass Effect */
+  background: rgba(30, 32, 41, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.adminMenu {
+  display:flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.adminMenu a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #444;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.adminMenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.contentArea {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  min-height: 300px;
+}
+
+.dashboardContainer h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.dashboardContainer p {
+  font-size: 1.1rem;
+  color: #a9acb2;
+  margin-bottom: 30px;
+}
+
+.logoutButton {
+  background: transparent;
+  color: #ff4d4d; /* Red color for logout */
+  border: 1px solid #ff4d4d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.logoutButton:hover {
+  background-color: rgba(255, 77, 77, 0.1);
+}

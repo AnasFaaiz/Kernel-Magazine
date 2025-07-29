@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-// import styles from './ArticlePage.module.css'; // You can create and use this later
 import { mockArticles } from '../data/mockData'; // We'll need this to find the article
 
 const ArticlePage: React.FC = () => {

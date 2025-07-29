@@ -2,14 +2,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
-  background-color: #ffffff;
-  border-bottom: 2px solid #e0e0e0;
-  color: #333;
+  padding: 15px 40px;
+  z-index: 100;
+  top: 0;
+  position: sticky;
+  background: rgba(30,32,41,0.5);
+  backdrop-filter: blue(10px);
+  -webkit-backdrop-filter: blut(10px);
+  border-bottom: 1px solid rbga(255, 255, 255, 0.1);
+
 }
 
 .logo img {
   height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
 }
 
 .title {
@@ -35,28 +45,40 @@
 .menu {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-left: auto; /* Pushes the menu to the right */
+  gap: 25px;
 }
 
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 8px 12px;
-}
-
+.menu a, 
 .menu button {
+  text-decoration: none;
+  background: transparent;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  color: #a9acb2;
+  font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: bold;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-.subscribeButton {
-  background-color: #28a745;
-  color: white;
+.menu a:hover, 
+.menu button:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0,229,255,0.5);
+}
+
+
+.subscribeButton,
+.loginButton {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: 1px solid #00e5ff;
+  color: #00eff;
+}
+
+.subscribeButton:hover,
+.loginButton:hover {
+  background-color: rgba(0, 229, 255, 0.1);
+  color: #00e5ff;
 }
 
 .signInButton {

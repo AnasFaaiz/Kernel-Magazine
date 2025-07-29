@@ -5,16 +5,20 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import BookView from './pages/BookView';
 import ArticlePage from './pages/ArticlePage';
+import AdminLoginPage from './pages/AdminLoginPage';
+import AdminDashboard from './pages/AdminDashboard';
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="appContainer">
         <Navbar />
-        <main>
+        <main className="mainContent">
           <Routes>
             <Route path="/" element={<HomePage />} />
+	    <Route path="/login" element={<AdminLoginPage />} />
+	    <Route path="/admin-dashboard" element={<AdminDashboard />} />
             <Route path="/book-view" element={<BookView />} /> {/* Activate this line */}
 	    <Route path="/article/:id" element={<ArticlePage />} />
           </Routes>
