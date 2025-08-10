@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './ArticleCard.module.css';
-import { mockArticles } from '../data/mockData';
+import styles from './module-css/ArticleCard.module.css';
+import { dummyArticles } from '../data/dummyData';
 import { Link } from 'react-router-dom';
+
 interface ArticleCardProps {
   article: Article;
 }

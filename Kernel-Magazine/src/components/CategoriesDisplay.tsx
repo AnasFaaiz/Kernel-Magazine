@@ -1,12 +1,13 @@
 import React, { useState, useMemo } from 'react';
-import styles from './CategoriesDisplay.module.css';
+import styles from './module-css/CategoriesDisplay.module.css';
 import ArticleCard from './ArticleCard';
-import { mockArticles } from '../data/mockData';
+import { dummyArticles } from '../data/dummyData';
+import { Link } from 'react-router-dom';
 
 const CategoriesDisplay: React.FC = () => {
   const articlesByCategory = useMemo(() => {
     const grouped: { [key: string]: Article[] } = {};
-    mockArticles.forEach(article => {
+    dummyArticles.forEach(article => {
       if (article.id === '1') return; // Skip the main article
       if (!grouped[article.category]) {
         grouped[article.category] = [];
@@ -17,8 +18,8 @@ const CategoriesDisplay: React.FC = () => {
   }, []);
 
   const categories = Object.keys(articlesByCategory);
-
   const [activeTab, setActiveTab] = useState<string>(categories[0] || '');
+  const articlesToShow = articlesByCategory[activeTab]?.slice(0, 4);
 
   return (
     <div className={styles.container}>
@@ -38,6 +39,12 @@ const CategoriesDisplay: React.FC = () => {
         {articlesByCategory[activeTab]?.map(article => (
           <ArticleCard key={article.id} article={article} />
         ))}
+
+	{articlesByCategory[activeTab]?.length > 4 && (
+	  <Link to={`/category/${activeTab}`} className={styles.viewAllCard}>
+	    <span> View All in {activeTab} &rarr;</span>
+	  </Link>
+	)}
       </div>
     </div>
   );

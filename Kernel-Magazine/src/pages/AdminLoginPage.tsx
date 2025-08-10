@@ -23,19 +23,28 @@ const AdminLoginPage: React.FC = () => {
 
 
    return (
-     <div className={styles.loginContainer}>
-       <h2>Admin Login </h2>
-       <form onSubmit={handleSubmit}>
-         <div className={styles.formGroup}>
-	   <label htmlFor="email"> Email </label>
-	   <input type="email" id="email" name="email" required />
+     <div className={styles.pageContainer}>
+       <div className={styles.loginBox}>
+         <div className={styles.brandingColumn}>
+	   <h1>Kernel</h1>
+	   <p> The core of Computing Excellence.<br/> <br/> Welcome Back, Admin.</p>
 	 </div>
-	 <div className={styles.formGroup} >
-	   <label htmlFor="password">Password</label>
-	   <input type="password" id="password" name="password" required />
+
+	 <div className={styles.formColumn}>
+	  <h2>Admin Login </h2>
+	  <form onSubmit={handleSubmit}>
+	    <div className={styles.formGroup}>
+	      <label htmlFor="email">Email</label>
+	      <input type="email" id="email" name="email" required />
+	    </div>
+	    <div className={styles.formGroup}>
+	      <label htmlFor="password">Password</label>
+	      <input type="password" id="password" name="password" required />
+	    </div>
+	    <button type="submit" className={styles.submitButton}>Login</button>
+	  </form>
 	 </div>
-	 <button type="submit" className={styles.submitButton}>Login</button>
-	</form>
+       </div>
      </div>
    );
 };

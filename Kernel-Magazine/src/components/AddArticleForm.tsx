@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import styles from './AddArticleForm.module.css';
-// 1. Import Firebase tools
+import styles from './module-css/AddArticleForm.module.css';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 

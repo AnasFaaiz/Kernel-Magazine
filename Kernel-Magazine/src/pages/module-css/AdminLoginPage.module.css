@@ -1,20 +1,61 @@
-.loginContainer {
-  max-width: 450px;
-  margin: 60px auto;
+/* Main container for the entire page */
+.pageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 40px;
-  border-radius: 12px;
-
-  /* The Glass Effect */
-  background: rgba(30, 32, 41, 0.6);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #E8EAF6``; /* Page background */
+  min-height: calc(100vh - 70px); /* Fill screen below navbar */
 }
 
-.loginContainer h2 {
+/* The main box that holds the two columns */
+.loginBox {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  min-height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Left Column: Branding --- */
+.brandingColumn {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #007BFF; /* Palette 1: Bright Blue Accent */
   color: #ffffff;
+}
+
+.brandingColumn h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.brandingColumn p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* --- Right Column: Form --- */
+.formColumn {
+  flex: 1;
+  padding: 40px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formColumn h2 {
+  color: #212529;
   text-align: center;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .formGroup {
@@ -24,7 +65,7 @@
 .formGroup label {
   display: block;
   margin-bottom: 8px;
-  color: #a9acb2;
+  color: #495057;
   font-weight: 500;
 }
 
@@ -32,25 +73,34 @@
   width: 100%;
   padding: 12px;
   border-radius: 6px;
-  border: 1px solid #40444b;
-  background-color: #16171b;
-  color: #ffffff;
+  border: 1px solid #DEE2E6;
+  background-color: #F8F9FA;
+  color: #212529;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .submitButton {
   width: 100%;
   padding: 12px;
   border-radius: 6px;
-  border: 1px solid #00e5ff;
-  color: #00e5ff;
-  background: transparent;
+  border: none;
+  color: #ffffff;
+  background-color: #007BFF;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-top: 10px;
 }
 
 .submitButton:hover {
-  background-color: rgba(0, 229, 255, 0.1);
+  background-color: #0056b3;
+}
+
+/* --- Responsive for mobile --- */
+@media (max-width: 768px) {
+  .loginBox {
+    flex-direction: column;
+  }
 }

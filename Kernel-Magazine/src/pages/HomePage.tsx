@@ -1,45 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './HomePage.module.css';
 import ArticleLayout from '../components/ArticleLayout';
-import { mockArticles } from '../data/mockData'; 
 import EventsSection from '../components/EventsSection';
-import { mockEvents } from '../data/mockEvents.ts';
 import CategoriesDisplay from '../components/CategoriesDisplay';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
+import type { Article, Event } from '../types';
 
-export interface Article {
-  id: string;
-  title: string;
-  category: string;
-  author: string;
-  date: string;
-  imageUrl: string;
-  snippet: string;
-  readingTime: string;
+interface HomePageProps {
+  articles: Article[];
+  events: Event[];
+  loading: boolean;
 }
 
-const HomePage: React.FC = () => {
-  const[articles, setArticles] = useState<Article[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+const HomePage: React.FC<HomePageProps> = ({ articles, events, loading }) => {
+  //const[articles, setArticles] = useState<Article[]>([]);
+  //const [loading, setLoading] = useState<boolean>(true);
+  if(loading) {
+	return <p style={{ textAlign: 'center', color: '#333', padding: '50px' }}>Loading Content...</p>;
+  }
 
-  useEffect(() => {
-	const fetchArticles = async () => {
-	  try {
-		const querySnapshot = await getDocs(collection(db, 'articles'));
-		const articlesData = querySnapshot.docs.map(doc => ({
-			id: doc.id,
-			...doc.data()
-		})) as Article[];
-		setArticles(articlesData);
-	      } catch(error){
-			console.error("Error fetching articles: ", error);
-		} finally {
-			setLoading(false);
-		}
-	};
-	fetchArticles();
-  }, []);
+	// useEffect(() => {
+	//const fetchArticles = async () => {
+	//  try {
+	//	const querySnapshot = await getDocs(collection(db, 'articles'));
+	//	const articlesData = querySnapshot.docs.map(doc => ({
+	//		id: doc.id,
+	//		...doc.data()
+	//	})) as Article[];
+	//	setArticles(articlesData);
+	//      } catch(error){
+	//		console.error("Error fetching articles: ", error);
+	//	} finally {
+	//		setLoading(false);
+	//	}
+	//};
+	//fetchArticles();
+	// }, []);
 
   return (
     <div>
@@ -49,12 +46,7 @@ const HomePage: React.FC = () => {
           <span>The Core Of Computing Excellence</span>
         </h1>
       </div>
-
-      {loading ? (
-      	<p style={{ textAlign: 'center', color: 'white', padding: '5-px'}}> Loading articles...</p>
-	) : (
-	  <ArticleLayout articles={articles} />
-      )}
+      <ArticleLayout articles={articles} />
       <CategoriesDisplay />
       <EventsSection />
     </div>
