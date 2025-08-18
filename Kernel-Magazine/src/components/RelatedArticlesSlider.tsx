@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import type { Article } from '../types';
-import styles from './module-css/RelatedArticlesSlider.module.css';
+import styles from './RelatedArticlesSlider.module.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';

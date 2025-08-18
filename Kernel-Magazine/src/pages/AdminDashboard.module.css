@@ -1,0 +1,40 @@
+.dashboardContainer {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  border-radius: 12px;
+  background: rgba(30, 32, 41, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mainContent {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f4f7f6;
+}
+
+.dashboardLayout {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #212529;
+}
+
+.contentArea {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  min-height: 300px;
+}
+

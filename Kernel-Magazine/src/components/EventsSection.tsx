@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './module-css/EventsSection.module.css';
+import styles from './EventsSection.module.css';
 import { mockEvents } from '../data/mockEvents';
 
 const EventsSection: React.FC = () => {

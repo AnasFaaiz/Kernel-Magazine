@@ -1,0 +1,20 @@
+.flipbookContainer {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.flipbook .page {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.react-pdf__Page__canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.pdfDocument {
+  display: none;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './module-css/ArticleLayout.module.css';
+import styles from './ArticleLayout.module.css';
 import { Link } from 'react-router-dom';
 import type { Article } from '../types';
 import RelatedArticlesSlider from './RelatedArticlesSlider';

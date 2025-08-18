@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase';
-import styles from './module-css/AdminDashboard.module.css';
+import styles from './AdminDashboard.module.css';
 import Sidebar from'../components/sidebar';
 
 
@@ -20,7 +20,7 @@ const AdminDashboard: React.FC = () => {
 
    return (
      <div className={styles.dashboardContainer}>
-      <Sidebar />
+	<Sidebar />
 	<main className={styles.mainContent}>
 	  <div className={styles.contentArea}>
 	    <Outlet />

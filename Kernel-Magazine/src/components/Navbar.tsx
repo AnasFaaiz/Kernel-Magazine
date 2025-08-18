@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import styles from './module-css/Navbar.module.css';
+import styles from './Navbar.module.css';
 import logo from '../assets/logo-placeholder.png';
 import { auth } from '../firebase';
 import { type User, signOut } from 'firebase/auth';
