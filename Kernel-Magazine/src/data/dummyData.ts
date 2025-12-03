@@ -4,7 +4,7 @@ export const dummyArticles: Article[] = [
   {
     id: '1',
     title: 'The Unseen World of Compilers',
-    category: 'Computer Science',
+    category: 'CS',
     author: 'Dr. Evelyn Reed',
     date: 'August 8, 2025',
     imageUrl: 'https://placehold.co/800x500/2E3141/E8EAF6?text=Compilers',
@@ -14,7 +14,7 @@ export const dummyArticles: Article[] = [
   {
     id: '2',
     title: 'Neural Networks: A Primer',
-    category: 'AI & ML',
+    category: 'AI',
     author: 'John Smith',
     date: 'August 5, 2025',
     imageUrl: 'https://placehold.co/400x250/2E3141/E8EAF6?text=AI',
@@ -24,7 +24,7 @@ export const dummyArticles: Article[] = [
   {
     id: '3',
     title: 'Introduction to GPT Models',
-    category: 'AI & ML',
+    category: 'ML',
     author: 'Dr. Evelyn Reed',
     date: 'July 30, 2025',
     imageUrl: 'https://placehold.co/400x250/2E3141/E8EAF6?text=GPT',
@@ -44,42 +44,11 @@ export const dummyArticles: Article[] = [
   {
     id: '5',
     title: 'Introduction to GPT Models',
-    category: 'AI & ML',
+    category: 'CS',
     author: 'Dr. Evelyn Reed',
     date: 'July 30, 2025',
     imageUrl: 'https://placehold.co/400x250/2E3141/E8EAF6?text=GPT',
     snippet: 'Understand the architecture behind large language models like GPT.',
     readingTime: '7 min read',
   },
-  {
-    id: '6',
-    title: 'Introduction to GPT Models',
-    category: 'AI & ML',
-    author: 'Dr. Evelyn Reed',
-    date: 'July 30, 2025',
-    imageUrl: 'https://placehold.co/400x250/2E3141/E8EAF6?text=GPT',
-    snippet: 'Understand the architecture behind large language models like GPT.',
-    readingTime: '7 min read',
-  },
-  {
-    id: '7',
-    title: 'Introduction to GPT Models',
-    category: 'AI & ML',
-    author: 'Dr. Evelyn Reed',
-    date: 'July 30, 2025',
-    imageUrl: 'https://placehold.co/400x250/2E3141/E8EAF6?text=GPT',
-    snippet: 'Understand the architecture behind large language models like GPT.',
-    readingTime: '7 min read',
-  },
-  {
-    id: '8',
-    title: 'Introduction to GPT Models',
-    category: 'AI & ML',
-    author: 'Dr. Evelyn Reed',
-    date: 'July 30, 2025',
-    imageUrl: 'https://placehold.co/400x250/2E3141/E8EAF6?text=GPT',
-    snippet: 'Understand the architecture behind large language models like GPT.',
-    readingTime: '7 min read',
-  }
-
 ];

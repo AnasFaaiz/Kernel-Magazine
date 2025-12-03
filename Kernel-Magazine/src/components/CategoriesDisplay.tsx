@@ -19,7 +19,8 @@ const CategoriesDisplay: React.FC = () => {
 
   const categories = Object.keys(articlesByCategory);
   const [activeTab, setActiveTab] = useState<string>(categories[0] || '');
-  const articlesToShow = articlesByCategory[activeTab]?.slice(0, 4);
+  
+  const articlesToShow = articlesByCategory[activeTab]?.slice(0, 4) || [];
 
   return (
     <div className={styles.container}>
@@ -40,11 +41,11 @@ const CategoriesDisplay: React.FC = () => {
           <ArticleCard key={article.id} article={article} />
         ))}
 
-	{articlesByCategory[activeTab]?.length > 4 && (
-	  <Link to={`/category/${activeTab}`} className={styles.viewAllCard}>
-	    <span> View All in {activeTab} &rarr;</span>
-	  </Link>
-	)}
+	    {articlesByCategory[activeTab]?.length > 4 && (
+	      <Link to={`/category/${activeTab}`} className={styles.viewAllCard}>
+	        <span> View All in {activeTab} &rarr;</span>
+	      </Link>
+	    )}
       </div>
     </div>
   );

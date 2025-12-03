@@ -5,38 +5,53 @@ import styles from './MagazineFlipbook.module.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`;
 
+// Flipbook requires ref-forwarding
+const PDFPageWrapper = React.forwardRef<HTMLDivElement, { pageNumber: number }>(
+  ({ pageNumber }, ref) => (
+    <div ref={ref} className={styles.page}>
+      <Page 
+        pageNumber={pageNumber}
+        renderTextLayer={false}
+        renderAnnotationLayer={false}
+        width={500}
+      />
+    </div>
+  )
+);
+
 interface FlipbookProps {
   pdfUrl: string;
 }
 
 const MagazineFlipbook: React.FC<FlipbookProps> = ({ pdfUrl }) => {
-   const [numPages, setNumPages] = useState<number>(0);
+  const [numPages, setNumPages] = useState<number>(0);
 
-   function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-	setNumPages(numPages);
-   }
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+    setNumPages(numPages);
+  }
 
   return (
     <div className={styles.flipbookContainer}>
-      <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess} className={styles.pdfDocument}>
-	{numPages > 0 && (
-          <HTMLFlipBook 
-            width={500} 
+      <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
+
+        {numPages > 0 && (
+          <HTMLFlipBook
+            width={500}
             height={700}
             className={styles.flipbook}
+            showCover={true}
+            flippingTime={600}
           >
-	   {Array.from(new Array(numPages), (el, index) => {
-	     return (
-	       <div className={styles.page} key={`page_${index + 1}`}>
-	         <Page pageNumber={index + 1} renderTextLayer={false} renderAnnotationLayer={false} />
-	       </div>
-	     );
-	   })}
-	 </HTMLFlipBook>
-	)}
-	</Document>
+            {Array.from({ length: numPages }, (_, index) => (
+              <PDFPageWrapper key={index} pageNumber={index + 1} />
+            ))}
+          </HTMLFlipBook>
+        )}
+
+      </Document>
     </div>
   );
 };
 
 export default MagazineFlipbook;
+
