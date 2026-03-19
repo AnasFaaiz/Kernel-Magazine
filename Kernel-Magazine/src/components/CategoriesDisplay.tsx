@@ -1,10 +1,11 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import styles from './CategoriesDisplay.module.css';
 import ArticleCard from './ArticleCard';
 import { dummyArticles } from '../data/dummyData';
 import { Link } from 'react-router-dom';
+import type { Article } from '../types';
 
-const CategoriesDisplay: React.FC = () => {
+const CategoriesDisplay = () => {
   const articlesByCategory = useMemo(() => {
     const grouped: { [key: string]: Article[] } = {};
     dummyArticles.forEach(article => {
@@ -19,8 +20,6 @@ const CategoriesDisplay: React.FC = () => {
 
   const categories = Object.keys(articlesByCategory);
   const [activeTab, setActiveTab] = useState<string>(categories[0] || '');
-  
-  const articlesToShow = articlesByCategory[activeTab]?.slice(0, 4) || [];
 
   return (
     <div className={styles.container}>

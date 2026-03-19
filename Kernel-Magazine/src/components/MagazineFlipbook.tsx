@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
-import HTMLFlipBook from 'react-pageflip';
+import { useEffect, useRef, useState, forwardRef } from 'react';
+const HTMLFlipBook = (require('react-pageflip') as any).default || require('react-pageflip');
 import { Document, Page, pdfjs } from 'react-pdf';
 import styles from './MagazineFlipbook.module.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`;
 
 /* ===== Page Wrapper ===== */
-const PDFPageWrapper = React.forwardRef<
+const PDFPageWrapper = forwardRef<
   HTMLDivElement,
   { pageNumber: number }
 >(({ pageNumber }, ref) => (
@@ -24,7 +24,7 @@ interface FlipbookProps {
   pdfUrl: string;
 }
 
-const MagazineFlipbook: React.FC<FlipbookProps> = ({ pdfUrl }) => {
+const MagazineFlipbook = ({ pdfUrl }: FlipbookProps) => {
   const [numPages, setNumPages] = useState(0);
   const [zoom, setZoom] = useState(1);
   const [currentPage, setCurrentPage] = useState(0);
@@ -92,15 +92,25 @@ const MagazineFlipbook: React.FC<FlipbookProps> = ({ pdfUrl }) => {
               className={styles.zoomWrapper}
               style={{ transform: `scale(${zoom})` }}
             >
+              {/* @ts-ignore */}
               <HTMLFlipBook
                 width={500}
                 height={700}
-                showCover
+                showCover={true}
                 usePortrait={false}
                 size="stretch"
                 flippingTime={600}
                 className={styles.flipbook}
                 onFlip={(e: any) => setCurrentPage(e.data)}
+                startPage={0}
+                drawShadow={true}
+                useMouseEvents={true}
+                autoSize={true}
+                showDoublePage={false}
+                mobileScrollSupport={true}
+                clickEventForward={true}
+                swipeDistance={30}
+                mount={true}
               >
                 {Array.from({ length: numPages }, (_, i) => (
                   <PDFPageWrapper key={i} pageNumber={i + 1} />

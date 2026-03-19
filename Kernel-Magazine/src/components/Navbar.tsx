@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import logo from '../assets/logo-placeholder.png';
 import { auth } from '../firebase';
@@ -10,8 +9,7 @@ interface NavbarProps {
   authInitialized: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ user, authInitialized }) => {
-  const location = useLocation();
+const Navbar = ({ user, authInitialized }: NavbarProps) => {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
