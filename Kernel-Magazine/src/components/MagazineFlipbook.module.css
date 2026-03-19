@@ -1,0 +1,97 @@
+.flipbookContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== Viewer Frame ===== */
+.viewerFrame {
+  position: relative;
+  height: 720px;
+  overflow: hidden;
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transition: width 0.35s ease;
+}
+
+/* Single page */
+.single {
+  width: 520px;
+}
+
+/* Double-page spread */
+.spread {
+  width: 1040px; /* 🔥 2 × 520 */
+}
+
+/* Fullscreen overrides */
+:fullscreen .viewerFrame {
+  width: 100vw !important;
+  height: 100vh;
+  border-radius: 0;
+}
+
+/* Controls */
+.controls {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  gap: 8px;
+  z-index: 20;
+}
+
+.controlBtn {
+  background: rgba(15, 23, 42, 0.9);
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.controlBtn:hover {
+  background: #3b82f6;
+}
+
+/* Page indicator */
+.pageIndicator {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.8);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 20;
+}
+
+/* Zoom wrapper */
+.zoomWrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center;
+  transition: transform 0.25s ease;
+}
+
+/* Flipbook */
+.flipbook {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+/* Page */
+.page {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* PDF canvas */
+.react-pdf__Page__canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+

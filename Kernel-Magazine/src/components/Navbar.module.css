@@ -1,0 +1,92 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #2E3141;
+  border-bottom: 1px solid #DEE2E6; /* Palette 1: Light Gray Border */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* --- Left Side: Logo and Nav Links --- */
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo img {
+  height: 40px;
+  display: block; /* Fixes small alignment issues */
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #E8EAF6; /* Palette 1: Charcoal Text */
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 5px;
+}
+/* Animated underline effect on hover */ 
+.navLinks a::after { 
+	content: ''; 
+	position: absolute; 
+	bottom: 0; 
+	left: 0;
+	width: 100%;
+	height: 2px; 
+	background-color: #E8EAF6; /* Palette 1: Bright Blue Accent */ transform: scaleX(0); 
+	transform-origin: bottom right; 
+	transition: transform 0.25s ease-out; } 
+.navLinks a:hover::after { 
+	transform: scaleX(1);
+	transform-origin: bottom left;
+} 
+/* --- Right Side: Action Buttons --- */ 
+.navActions { 
+	display: flex;
+	align-items: center;
+	gap: 15px; 
+} 
+.subscribeButton, 
+.loginButton { 
+	text-decoration: none; 
+	border: none; 
+	padding: 8px 18px; 
+	border-radius: 6px; 
+	cursor: pointer; 
+	font-weight: 600;
+	font-size: 0.9rem; 
+	transition: all 0.2s ease; 
+	display: inline-block; /* For Link component */ 
+	text-align: center; 
+}
+
+/* Primary button style */ 
+.loginButton { 
+	background-color: #007BFF; 
+	color: #ffffff; 
+} 
+
+.loginButton:hover { 
+	background-color: #0056b3; 
+} 
+
+/* Secondary "ghost button" style */ 
+.subscribeButton { 
+	background-color: transparent; 
+	border: 1px solid #007BFF; 
+	color: #007BFF; 
+} 
+.subscribeButton:hover { 
+	background-color: #007BFF; 
+	color: #ffffff; 
+}
