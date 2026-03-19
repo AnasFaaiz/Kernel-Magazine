@@ -17,12 +17,12 @@ const Sidebar = () => {
         >
           Bulk Add Articles
         </NavLink>
-	<NavLink
-	  to="/admin-dashboard/manage"
-	  className={({ isActive }: { isActive: boolean }) => isActive ? styles.activeLink : styles.link}
-	>
-	  Manage
-	</NavLink>
+        <NavLink
+          to="/admin-dashboard/manage-news"
+          className={({ isActive }: { isActive: boolean }) => isActive ? styles.activeLink : styles.link}
+        >
+          Manage News
+        </NavLink>
       </nav>
     </aside>
   );

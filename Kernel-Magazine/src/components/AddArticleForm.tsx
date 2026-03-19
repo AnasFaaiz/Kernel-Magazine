@@ -9,6 +9,7 @@ const AddArticleForm: React.FC = () => {
   const [category, setCategory] = useState('');
   const [snippet, setSnippet] = useState('');
   const [readingTime, setReadingTime] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
 
   // 2. Make the handleSubmit function async
@@ -24,6 +25,7 @@ const AddArticleForm: React.FC = () => {
         category: category,
         snippet: snippet,
         readingTime: readingTime,
+        imageUrl: imageUrl || 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop',
         publishedDate: serverTimestamp(), // Adds the current server time
       });
       
@@ -34,6 +36,7 @@ const AddArticleForm: React.FC = () => {
       setCategory('');
       setSnippet('');
       setReadingTime('');
+      setImageUrl('');
 
     } catch (error) {
       console.error("Error adding document: ", error);
@@ -85,6 +88,15 @@ const AddArticleForm: React.FC = () => {
           value={readingTime}
           onChange={(e) => setReadingTime(e.target.value)}
           required
+        />
+      </div>
+      <div className={styles.formGroup}>
+        <label htmlFor="imageUrl">Image URL (optional)</label>
+        <input 
+          type="url" 
+          id="imageUrl" 
+          value={imageUrl}
+          onChange={(e) => setImageUrl(e.target.value)}
         />
       </div>
       <div className={styles.formGroup}>

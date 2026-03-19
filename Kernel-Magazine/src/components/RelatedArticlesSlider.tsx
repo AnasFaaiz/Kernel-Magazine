@@ -14,6 +14,17 @@ const RelatedArticlesSlider: React.FC<SliderProps> = ({ articles }) => {
     <div className={styles.sliderContainer}>
       <div className={styles.staticList}>
         {displayedArticles.map((article) => (
+          article.externalUrl ? (
+            <a href={article.externalUrl} target="_blank" rel="noopener noreferrer" className={styles.cardLink} key={article.id}>
+              <div className={styles.relatedCard}>
+                <img src={article.imageUrl} alt={article.title} />
+                <div className={styles.cardContent}>
+                  <h3>{article.title}</h3>
+                  <p>{article.author}</p>
+                </div>
+              </div>
+            </a>
+          ) : (
             <Link to={`/article/${article.id}`} className={styles.cardLink} key={article.id}>
               <div className={styles.relatedCard}>
                 <img src={article.imageUrl} alt={article.title} />
@@ -23,6 +34,7 @@ const RelatedArticlesSlider: React.FC<SliderProps> = ({ articles }) => {
                 </div>
               </div>
             </Link>
+          )
         ))}
       </div>
     </div>

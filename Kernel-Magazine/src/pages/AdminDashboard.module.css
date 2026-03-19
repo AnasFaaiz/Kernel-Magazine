@@ -1,40 +1,52 @@
 .dashboardContainer {
-  padding: 30px;
-  text-align: center;
   display: flex;
-  border-radius: 12px;
-  background: rgba(30, 32, 41, 0.6);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.mainContent {
-  flex-grow: 1;
-  padding: 30px;
-  background-color: #f4f7f6;
+  min-height: calc(100vh - 70px); /* Fill screen below navbar */
+  background-color: #f4f6f8;
+  color: #333;
 }
 
-.dashboardLayout {
+.mainContent {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #f4f6f8;
   display: flex;
-  min-height: calc(100vh - 70px);
+  flex-direction: column;
 }
-.header {
+
+.dashboardHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.header h1 {
+.dashboardHeader h2 {
   margin: 0;
   font-size: 2rem;
   color: #212529;
+  font-weight: 700;
+}
+
+.logoutBtn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.logoutBtn:hover {
+  background-color: #c82333;
 }
 
 .contentArea {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-  min-height: 300px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  min-height: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  overflow-y: auto;
 }
-

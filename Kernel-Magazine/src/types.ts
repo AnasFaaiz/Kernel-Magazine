@@ -7,6 +7,7 @@ export interface Article {
   imageUrl: string;
   snippet: string;
   readingTime: string;
+  externalUrl?: string;
 }
 
 export interface Event {
@@ -14,4 +15,20 @@ export interface Event {
   title: string;
   description: string;
   imageUrl: string;
+}
+
+export interface NewsSource {
+  id: string;
+  name: string;
+  url: string; // The full test URL or pattern
+  apiKey?: string;
+  isActive: boolean;
+  mapping: {
+    rootPath: string; // e.g. "articles" or "results"
+    titleKey: string;
+    snippetKey: string;
+    imageKey: string;
+    urlKey: string;
+    dateKey: string;
+  }
 }
