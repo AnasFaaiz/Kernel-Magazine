@@ -13,6 +13,11 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
+console.log("Firebase config check:", {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY ? "EXISTS" : "MISSING",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID
+});
+
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);

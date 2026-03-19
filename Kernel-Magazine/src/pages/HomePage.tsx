@@ -24,7 +24,7 @@ const HomePage = ({ articles, events, loading }: HomePageProps) => {
     <div>
       <div className={styles.titleContainer}>
         <h1>
-          Kernel
+          Kernel Magazine
           <span>The Core Of Computing Excellence</span>
         </h1>
       </div>

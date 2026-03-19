@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, forwardRef } from 'react';
-const HTMLFlipBook = (require('react-pageflip') as any).default || require('react-pageflip');
+import HTMLFlipBook_ from 'react-pageflip';
+const HTMLFlipBook = HTMLFlipBook_ as any;
 import { Document, Page, pdfjs } from 'react-pdf';
 import styles from './MagazineFlipbook.module.css';
 
