@@ -1,12 +1,10 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import { dummyArticles } from '../data/dummyData'; 
-import type { Article } from '../types';
 
-const ArticlePage: React.FC = () => {
+const ArticlePage = () => {
   const { id } = useParams<{ id: string }>();
 
-  const article = mockArticles.find(art => art.id === id);
+  const article = dummyArticles.find((art: any) => art.id === id);
 
   if (!article) {
     return (

@@ -1,10 +1,7 @@
-import React from 'react';
 import styles from './HomePage.module.css';
 import ArticleLayout from '../components/ArticleLayout';
 import EventsSection from '../components/EventsSection';
 import CategoriesDisplay from '../components/CategoriesDisplay';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../firebase';
 import type { Article, Event } from '../types';
 
 interface HomePageProps {
@@ -13,30 +10,15 @@ interface HomePageProps {
   loading: boolean;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ articles, events, loading }) => {
-  //const[articles, setArticles] = useState<Article[]>([]);
-  //const [loading, setLoading] = useState<boolean>(true);
-  if(loading) {
-	return <p style={{ textAlign: 'center', color: '#333', padding: '50px' }}>Loading Content...</p>;
+const HomePage = ({ articles, events, loading }: HomePageProps) => {
+  if (loading) {
+    return <p style={{ textAlign: 'center', color: '#333', padding: '50px' }}>Loading Content...</p>;
   }
 
-	// useEffect(() => {
-	//const fetchArticles = async () => {
-	//  try {
-	//	const querySnapshot = await getDocs(collection(db, 'articles'));
-	//	const articlesData = querySnapshot.docs.map(doc => ({
-	//		id: doc.id,
-	//		...doc.data()
-	//	})) as Article[];
-	//	setArticles(articlesData);
-	//      } catch(error){
-	//		console.error("Error fetching articles: ", error);
-	//	} finally {
-	//		setLoading(false);
-	//	}
-	//};
-	//fetchArticles();
-	// }, []);
+  // To avoid unused prop error until EventsSection is dynamic
+  if (events.length > 0) {
+    console.log("Events loaded:", events.length);
+  }
 
   return (
     <div>

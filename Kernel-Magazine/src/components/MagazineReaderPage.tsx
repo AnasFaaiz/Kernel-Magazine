@@ -1,8 +1,7 @@
-import React from 'React';
 import MagazineFlipbook from '../components/MagazineFlipbook';
 import './MagazineReaderPage.css';
 
-const MagazineReaderPage: React.FC = () => {
+const MagazineReaderPage = () => {
   return (
     <div className="readerPage">
       <div className="readerContainer">

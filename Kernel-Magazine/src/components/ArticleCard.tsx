@@ -1,13 +1,12 @@
-import React from 'react';
 import styles from './ArticleCard.module.css';
-import { dummyArticles } from '../data/dummyData';
 import { Link } from 'react-router-dom';
+import type { Article } from '../types';
 
 interface ArticleCardProps {
   article: Article;
 }
 
-const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
+const ArticleCard = ({ article }: ArticleCardProps) => {
   return (
    <Link to={`/article/${article.id}`} className={styles.cardLink}>
     <div className={styles.articleCard}>
